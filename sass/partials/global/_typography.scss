@@ -20,72 +20,70 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	// margin-bottom: .5em;
-	// @extend %bold;
+h2 {
+	margin-bottom: .5em;
+	@extend %serif;
+	//@extend %bold;
 }
 
-#page-title { //most h1s, except the logo on the homepage
-
+h1 { //most h1s, except the logo on the homepage
+	@include fontsize(48);
 }
 
 h2 {
-
+	@include fontsize(28);
 }
 
-h3 {
+// h3 {
 
-}
+// }
 
-h4 {
+// h4 {
 
-}
+// }
 
-h5 {
+// h5 {
 
-}
+// }
 
-h6 {
+// h6 {
 
-}
+// }
 
-b,
-strong {
-	@extend %bold;
-}
+// b,
+// strong {
+// 	@extend %bold;
+// }
 
-i,
-em {
-	@extend %italic;
-}
+// i,
+// em {
+// 	@extend %italic;
+// }
 
-blockquote {
+// blockquote {
 	
-}
+// }
 
 p {
 	margin-bottom: 1em;
+	line-height: 1.4;
 }
 
-small {
+// small {
 	
-}
+// }
 
-sup {
-	position: relative;
-	font-size: .8em;
-	top: -.2em;
-}
+// sup {
+// 	position: relative;
+// 	font-size: .8em;
+// 	top: -.2em;
+// }
 
-sub {
-	position: relative;
-	font-size: .8em;
-	top: .2em;
-}
+// sub {
+// 	position: relative;
+// 	font-size: .8em;
+// 	top: .2em;
+// }
 
 *:focus {
 	outline: none; //undoing the ugly blue glow that defaults when you focus on a link or anything with a tabindex
@@ -103,68 +101,68 @@ a {
 	}
 }
 
-ul,
-ol { //unifying them so the spacing all stays consistent and for DRY purposes
-	.field--name-body & { //this saves me having to override it for all the menus, etc.
-		padding-left: 3em;
-		margin-bottom: 1em;
+// ul,
+// ol { //unifying them so the spacing all stays consistent and for DRY purposes
+// 	.field--name-body & { //this saves me having to override it for all the menus, etc.
+// 		padding-left: 3em;
+// 		margin-bottom: 1em;
 
-		li {
-			list-style-type: none; //we remove the list style and then add back in with :befores so that we can style numbers and bullets
-			margin-bottom: 1em;
+// 		li {
+// 			list-style-type: none; //we remove the list style and then add back in with :befores so that we can style numbers and bullets
+// 			margin-bottom: 1em;
 
-			&:before {
-				margin-left: -1.5em;
-				position: absolute;
-				//color: $accent-cool-light; 
-			}
+// 			&:before {
+// 				margin-left: -1.5em;
+// 				position: absolute;
+// 				//color: $accent-cool-light; 
+// 			}
 
-			ul,
-			ol {
-				margin-top: 1em;
-				padding-left: 2em; //the spacing shouldn't be as drastic the second level deep
-			}
-		} //li
-	} //field--name-body &
-} //ol, ul
+// 			ul,
+// 			ol {
+// 				margin-top: 1em;
+// 				padding-left: 2em; //the spacing shouldn't be as drastic the second level deep
+// 			}
+// 		} //li
+// 	} //field--name-body &
+// } //ol, ul
 
-ul {
-	.field--name-body & {
-		li {
-			&:before {
-				content: '\2022'; //bullets
-			}
-		}
-	}
-} //ul
+// ul {
+// 	.field--name-body & {
+// 		li {
+// 			&:before {
+// 				content: '\2022'; //bullets
+// 			}
+// 		}
+// 	}
+// } //ul
 
-ol {
-	.field--name-body & {
-		counter-reset: li;
+// ol {
+// 	.field--name-body & {
+// 		counter-reset: li;
 
-		li {
-			&:before {
-				content: counter(li)')'; //numbers
-				counter-increment: li;
-			}
-		}
+// 		li {
+// 			&:before {
+// 				content: counter(li)')'; //numbers
+// 				counter-increment: li;
+// 			}
+// 		}
 
-		ul li { //don't let uls nested inside ols keep acting like ols
-			&:before {
-				content: '\2022';
-				counter-increment: none;
-			}
-		}
-	} //field--name-body &
-} //ol
+// 		ul li { //don't let uls nested inside ols keep acting like ols
+// 			&:before {
+// 				content: '\2022';
+// 				counter-increment: none;
+// 			}
+// 		}
+// 	} //field--name-body &
+// } //ol
 
-dt {
+// dt {
 
-}
+// }
 
-dd {
+// dd {
 	
-}
+// }
 
 // .pager{
 // 	li{
@@ -199,10 +197,10 @@ dd {
 // 	} //li
 // } //pager
 
-.visuallyhidden {
-	@extend %visuallyhidden;
-}
+// .visuallyhidden {
+// 	@extend %visuallyhidden;
+// }
 
-.clearfix {
-	@extend %clearfix;
-}
+// .clearfix {
+// 	@extend %clearfix;
+// }

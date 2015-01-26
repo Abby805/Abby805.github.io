@@ -12,11 +12,11 @@ module.exports = function (grunt) {
         }
       },
       styles: {
-        files: ['stylesheets/style--no-prefix.css'],
+        files: ['sass/{,**/}*.scss'],
         tasks: ['autoprefixer:dev']
       },
       js: {
-        files: ['js/{,**/}*.js'],
+        files: ['js/functions.js'],
         tasks: ['jshint']
       }
     }, //watch
@@ -26,18 +26,18 @@ module.exports = function (grunt) {
           compass: false
         },
         files: {
-          'stylesheets/style--no-prefix.css': 'sass/style.scss'
+          'stylesheets/style.css': 'sass/style.scss'
         }
       }
     }, //sass
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions', 'ie >= 9'], //change as needed
+        browsers: ['last 2 versions', 'ie >= 10'], //change as needed
         map: true
       },
       dev: {
         files: {
-          'stylesheets/style.css' : 'stylesheets/style--no-prefix.css'
+          'stylesheets/style.css' : 'stylesheets/style.css'
         }
       }
     }, //autoprefixer

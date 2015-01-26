@@ -10,17 +10,6 @@
   }
 }
 
-%visuallyhidden{
-  border: 0; 
-  clip: rect(0 0 0 0); 
-  height: 1px; 
-  margin: -1px; 
-  overflow: hidden; 
-  padding: 0; 
-  position: absolute; 
-  width: 1px;
-}
-
 %icon {
   font-family: 'icon'; //declared in the typography partial
   font-style: normal;
@@ -33,27 +22,13 @@
 }
 
 %sans-serif {
-  font-family: 'Arial', sans-serif;
-  // font-weight: 400;
-  // -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
 }
 
-//maybe set a serif one if needed
-
-%bold {
-  font-weight: bold; //use a number yo
-}
-
-%italic {
-  font-style: italic;
-}
-
-%no-bullets { //any time I need to override my fancy bullets; should be applied to a <ul>
-  padding-left: 0 !important; //specificity is frequently an issue
-
-  li {
-    &:before {
-      content:' ' !important; //specificity again
-    }
-  }
+%serif {
+  font-family: 'Rokkitt', serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
 }
