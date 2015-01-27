@@ -16,22 +16,35 @@ html {
 
 body {
 	@extend %sans-serif; 
+	//text-align: center;
 	// color:$text-color;
 }
 
 h1,
+h2,
+h3 {
+	//margin-bottom: .5em;
+	//@extend %serif;
+	@extend %bold;
+}
+
+h1,
+h2 { //most h1s, except the logo on the homepage
+	//@include fontsize(48);
+	//text-align: left;
+	@include fontsize(20);
+}
+
 h2 {
 	margin-bottom: .5em;
-	@extend %serif;
-	//@extend %bold;
+	color: #666;
 }
 
-h1 { //most h1s, except the logo on the homepage
-	@include fontsize(48);
-}
-
-h2 {
-	@include fontsize(28);
+h3,
+.social h2 {
+	font-size: inherit;
+	margin-bottom: .5em;
+	color: #999;
 }
 
 // h3 {

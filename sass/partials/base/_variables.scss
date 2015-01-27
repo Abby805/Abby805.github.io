@@ -6,7 +6,7 @@
 // $c-warm: #f00;
 
 //Base Font Size
-$base-font-size: 20; //change this to whatever size (in px) most of the body copy in your project is
+$base-font-size: 16; //change this to whatever size (in px) most of the body copy in your project is
 
 //Time out for a function
 @function px-to-em($px, $denominator: $base-font-size) {

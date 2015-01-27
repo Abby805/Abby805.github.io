@@ -45,22 +45,15 @@ table {
 *:after {
   box-sizing: border-box; }
 
-.port-piece:before, .port-piece:after {
-  content: "";
-  display: table; }
-.port-piece:after {
-  clear: both; }
-
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased; }
 
 h1,
-h2 {
-  font-family: 'Rokkitt', serif;
-  font-weight: 700;
-  -webkit-font-smoothing: antialiased; }
+h2,
+h3 {
+  font-weight: 700; }
 
 img {
   max-width: 100% !important;
@@ -70,19 +63,22 @@ img {
   img {
     width: auto; } }
 html {
-  font-size: 125%; }
+  font-size: 100%; }
 
 h1,
 h2 {
-  margin-bottom: .5em; }
-
-h1 {
-  font-size: 48px;
-  font-size: 2.4rem; }
+  font-size: 20px;
+  font-size: 1.25rem; }
 
 h2 {
-  font-size: 28px;
-  font-size: 1.4rem; }
+  margin-bottom: .5em;
+  color: #666; }
+
+h3,
+.social h2 {
+  font-size: inherit;
+  margin-bottom: .5em;
+  color: #999; }
 
 p {
   margin-bottom: 1em;
@@ -91,18 +87,19 @@ p {
 *:focus {
   outline: none; }
 
-@media (min-width: 38.4em) {
-  .port-piece img,
-  .port-piece .port-wrapper {
-    width: 50%; }
-  .port-piece:nth-child(odd) img,
-  .port-piece:nth-child(odd) .port-wrapper {
-    float: right; }
-  .port-piece:nth-child(even) img,
-  .port-piece:nth-child(even) .port-wrapper {
-    float: left; } }
+.header,
+.main,
+.footer {
+  max-width: 64.5em;
+  padding: 1em;
+  margin: 0 auto; }
 
-.port-wrapper {
-  padding: 1em; }
+.header {
+  padding-top: 2em; }
+
+.port-piece {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #666; }
 
 /*# sourceMappingURL=style.css.map */
