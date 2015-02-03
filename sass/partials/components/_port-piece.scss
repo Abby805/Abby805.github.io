@@ -1,0 +1,37 @@
+.port-piece {
+  @extend %clearfix;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #666;
+
+  @include breakpoint($bp-sm) {
+    img,
+    .port-wrapper {
+      width: 48%;
+    }
+
+    &:nth-child(even) {
+      img {
+        float: left;
+      }
+
+      .port-wrapper {
+        float: right;
+      }
+    }
+
+    &:nth-child(odd) {
+      img {
+        float: right;
+      }
+
+      .port-wrapper {
+        float: left;
+      }
+    }
+  }
+
+  img {
+    margin-bottom: 1em;
+  }
+}

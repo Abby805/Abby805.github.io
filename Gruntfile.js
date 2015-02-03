@@ -14,10 +14,6 @@ module.exports = function (grunt) {
       styles: {
         files: ['sass/{,**/}*.scss'],
         tasks: ['autoprefixer:dev']
-      },
-      js: {
-        files: ['js/functions.js'],
-        tasks: ['jshint']
       }
     }, //watch
     sass: {
@@ -40,17 +36,10 @@ module.exports = function (grunt) {
           'stylesheets/style.css' : 'stylesheets/style.css'
         }
       }
-    }, //autoprefixer
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['js/functions.js']
-    } //jshint
+    } //autoprefixer
   }); //initConfig
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
 };

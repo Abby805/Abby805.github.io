@@ -10,23 +10,14 @@
   }
 }
 
-%icon {
-  font-family: 'icon'; //declared in the typography partial
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  speak: none;
-}
-
 %sans-serif {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
 
-%bold {
-  font-weight: 700;
+%serif {
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
