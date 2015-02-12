@@ -52,31 +52,19 @@ table {
   clear: both; }
 
 body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased; }
 
 h1,
 h2,
 h3 {
-  font-family: 'Gentium Book Basic', serif;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased; }
-
-.favorite-things {
-  padding-left: 3em;
-  margin-bottom: 1em; }
-  .favorite-things li {
-    line-height: 1.4; }
-    .favorite-things li:before {
-      content: '\2022';
-      position: absolute;
-      margin-left: -1.5em; }
+  font-weight: 800; }
 
 .port-piece {
   margin-bottom: 2em;
   padding-bottom: 1em;
-  border-bottom: 1px solid #666; }
+  border-bottom: 1px solid #858502; }
   @media (min-width: 48em) {
     .port-piece img,
     .port-piece .port-wrapper {
@@ -101,7 +89,9 @@ h3 {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  font-variant-ligatures: common-ligatures; }
+  -webkit-font-variant-ligatures: common-ligatures;
+     -moz-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures; }
   .social-media li {
     float: left;
     margin-right: .5em; }
@@ -115,8 +105,8 @@ h3 {
     text-decoration: none; }
 
 img {
-  max-width: 100% !important;
-  height: auto !important; }
+  max-width: 100%;
+  height: auto; }
 
 @font-face {
   font-family: 'icon';
@@ -128,16 +118,18 @@ html {
   font-size: 100%; }
 
 h1 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  text-transform: uppercase; }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-bottom: .5em;
-  color: #999; }
+  text-transform: uppercase;
+  color: #858502; }
 
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: .5em; }
+  font-size: 1.125rem;
+  margin-bottom: 1em; }
 
 p {
   margin-bottom: 1em;
@@ -147,12 +139,11 @@ p {
   outline: none; }
 
 a {
-  color: #c30; }
+  color: #1155cc; }
   a:hover, a:focus {
-    text-decoration: none;
-    color: #992600; }
+    text-decoration: none; }
   a:focus {
-    outline: dotted 2px #c30; }
+    outline: dotted 1px #1155cc; }
 
 .header,
 .main,
@@ -163,10 +154,14 @@ a {
 
 .header {
   padding: 2em 1em;
-  border-bottom: solid 2px #c30; }
+  border-bottom: solid 2px #858502; }
 
 .summary {
   padding-top: 1em;
   margin-bottom: 2em; }
+
+.other-creations {
+  padding-bottom: 1em;
+  border-bottom: solid 1px #858502; }
 
 /*# sourceMappingURL=style.css.map */

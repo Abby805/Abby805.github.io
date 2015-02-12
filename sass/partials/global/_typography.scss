@@ -1,4 +1,4 @@
-@font-face { //icon fonts FTW
+@font-face {
 	font-family: 'icon';
 	src:url('../fonts/icons.eot');
 	src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
@@ -20,22 +20,24 @@ body {
 h1,
 h2,
 h3 {
-	@extend %serif;
+	@extend %bold;
 }
 
 h1 {
 	@include fontsize(32);
+	text-transform: uppercase;
 }
 
 h2 {
-	@include fontsize(28);
+	@include fontsize(24);
 	margin-bottom: .5em;
-	color: #999;
+	text-transform: uppercase;
+	color: $green;
 }
 
 h3 {
-	@include fontsize(24);
-	margin-bottom: .5em;
+	@include fontsize(18);
+	margin-bottom: 1em;
 }
 
 p {
@@ -48,15 +50,14 @@ p {
 }
 
 a {
-	color: $red;
+	color: $blue-lt;
 
 	&:hover,
 	&:focus {
 		text-decoration: none;
-		color: darken($red, 10);
 	}
 
 	&:focus { //keyboard nav only
-		outline: dotted 2px $red;
+		outline: dotted 1px $blue-lt;
 	}
 }

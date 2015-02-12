@@ -1,5 +1,5 @@
 //Base Font Size
-$base-font-size: 16; //change this to whatever size (in px) most of the body copy in your project is
+$base-font-size: 16;
 
 //Time out for a function
 @function px-to-em($px, $denominator: $base-font-size) {
@@ -10,4 +10,5 @@ $base-font-size: 16; //change this to whatever size (in px) most of the body cop
 $bp-sm: px-to-em(768);
 
 //Colors
-$red: #c30;
+$green: #858502;
+$blue-lt: #1155cc;
