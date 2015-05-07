@@ -10,8 +10,7 @@
   <script>
     function resize() {
       var height = document.getElementsByTagName("html")[0].scrollHeight;
-      window.parent.postMessage(["setHeight", height], "*");
-      console.log('The resize function fired.');
+      window.parent.postMessage(["setHeight", height, "major"], "*");
     }
   </script>
 </head>
