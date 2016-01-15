@@ -13,7 +13,7 @@ module.exports = function (grunt) {
       },
       styles: {
         files: ['sass/{,**/}*.scss'],
-        tasks: ['autoprefixer:dev']
+        tasks: ['postcss:dev']
       }
     }, //watch
     sass: {
@@ -26,10 +26,12 @@ module.exports = function (grunt) {
         }
       }
     }, //sass
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 2 versions', 'ie >= 10'], //change as needed
-        map: true
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions', 'ie >= 10']})
+        ]
       },
       dev: {
         files: {
@@ -41,5 +43,5 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
 };

@@ -1,4 +1,4 @@
 Abby805.github.io
 =================
 
-Very much a work in progress.
+It's the grown-up version of a hand-drawn book called "All About Me!"

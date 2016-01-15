@@ -1,0 +1,6 @@
+//Border boxes FTW!!!
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}

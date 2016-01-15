@@ -1,4 +1,3 @@
-// Most of this is the standard Eric Meyer reset, and I add in the border-box thing at the end.
 // http://meyerweb.com/eric/tools/css/reset/ 
 // v2.0 | 20110126
 // License: none (public domain)
@@ -45,11 +44,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-//Border boxes FTW!!!
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
 }
