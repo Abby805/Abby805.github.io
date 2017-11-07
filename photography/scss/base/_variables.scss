@@ -1,0 +1,14 @@
+// Color variables
+$c-black: #1a1a1a;
+$c-white: #ffffff;
+$c-salmon: #ff3131;
+
+// Font-related variables
+
+$font-main: 'Raleway', 'Helvetica', 'Arial';
+$font-size-base: 16; // The default font size for your site. This gets used in
+// the px-to-em() function used sitewide.
+$font-weight-normal: 400;
+
+// Breakpoint variables
+$bp-sm: 35em; //560px

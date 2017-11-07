@@ -1,0 +1,41 @@
+// Global typography defaults. If these need to be overridden in a specific
+// instance, it should be done in a "components" partial
+
+body {
+  font-family: $font-main;
+  font-size: ($font-size-base/16) * 100%;
+  line-height: 1.6;
+  background: $c-black;
+  color: $c-white;
+}
+
+h1 {
+  margin-bottom: px-to-rem(20);
+  font-size: px-to-rem(32);
+  color: $c-salmon;
+
+  @include breakpoint($bp-sm) {
+    font-size: px-to-rem(48);
+  }
+}
+
+p {
+  @include breakpoint($bp-sm) {
+    font-size: px-to-rem(20);
+  }
+}
+
+.intro-text p:after {
+  content: '';
+  display: inline-block;
+  margin-left: 0.5em;
+  height: 0.5em;
+  width: 0.5em;
+  background: $c-salmon;
+}
+
+// Undoing the ugly blue glow that defaults when you focus on a link or anything
+// with a tabindex.
+*:focus {
+  outline: none;
+}
