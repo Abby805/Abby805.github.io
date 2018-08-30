@@ -1,13 +1,18 @@
 {
-  "name": "Abby805.github.io",
-  "version": "1.0.0",
+  "name": "tag-gulp-starter",
+  "version": "0.1.0",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^1.0.1",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-postcss": "^0.7.1",
-    "autoprefixer": "^6.3.1",
-    "cssnano": "^3.4.0"
+    "autoprefixer": "^6.3.6",
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "jshint": "^2.9.1",
+    "susy": "^3.0.1"
   }
 }

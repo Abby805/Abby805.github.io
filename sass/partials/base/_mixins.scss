@@ -1,9 +1,0 @@
-@mixin fontsize($number) {
-	font-size: $number/$base-font-size + rem;
-}
-
-@mixin breakpoint($bp) {
-	@media (min-width: #{$bp}) {
-		@content;
-	}
-}
