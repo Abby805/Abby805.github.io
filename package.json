@@ -1,7 +1,6 @@
 {
-  "name": "achiote",
+  "name": "abbyport",
   "version": "0.1.0",
-  "sasslintConfig": "sass-lint.yml",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.1.5",
@@ -20,7 +19,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sass-glob": "^1.0.9",
-    "gulp-sass-lint": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4"
   }
 }

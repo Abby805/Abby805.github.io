@@ -1,0 +1,68 @@
+// Logo
+// SVGs treat transforms ridiculously
+// See https://css-tricks.com/transforms-on-svg-elements/
+
+$triangles: ( // All of the .tri polygons and their center coordinates
+  t1: (50, 120),
+  t2: (75, 120),
+  t3: (75, 80),
+  t4: (100, 80),
+  t5: (100, 40),
+  t6: (125, 80),
+  t7: (125, 120),
+  t8: (150, 120),
+  t9: (175, 120),
+  t10: (175, 80),
+  t11: (200, 80),
+  t12: (200, 40),
+  t13: (225, 80),
+  t14: (225, 120),
+  t15: (250, 80),
+  t16: (250, 40),
+  t17: (275, 80),
+  t18: (275, 120),
+  t19: (300, 120)
+);
+
+@each $triangle, $coords in $triangles {
+  .#{$triangle} {
+    transform-origin: (nth($coords, 1) * 1px) (nth($coords, 2) * 1px);
+  }
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.tri {
+  transition: 0.3s ease all;
+  stroke: $c-black;
+  stroke-width: 1px;
+  fill: $c-black;
+  transform: none;
+
+  .logo:hover & {
+    &:nth-child(odd) {
+      transform: rotate(-4deg);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(3n) {
+      fill: lighten($c-black, 6.25%);
+      stroke: lighten($c-black, 6.25%);
+    }
+
+    &:nth-child(3n + 1) {
+      fill: lighten($c-black, 12.5%);
+      stroke: lighten($c-black, 12.5%);
+    }
+
+    &:nth-child(3n + 2) {
+      fill: lighten($c-black, 18.75%);
+      stroke: lighten($c-black, 18.75%);
+    }
+  }
+}

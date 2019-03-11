@@ -1,7 +1,6 @@
 var gulp = require("gulp"),
   sass = require("gulp-sass"),
   eslint = require("gulp-eslint"),
-  scsslint = require("gulp-sass-lint"),
   cache = require("gulp-cached"),
   prefix = require("autoprefixer"),
   notify = require("gulp-notify"),
@@ -49,20 +48,6 @@ gulp.task("scss", () => {
     .pipe(gulp.dest("css"));
 });
 
-gulp.task("scsslint", () => {
-  return gulp
-    .src(paths.styles)
-    .pipe(
-      scsslint({
-        options: {
-          configFile: "sass-lint.yml"
-        }
-      })
-    )
-    .pipe(scsslint.format())
-    .pipe(scsslint.failOnError());
-});
-
 gulp.task("eslint", () => {
   return gulp
     .src(paths.scripts)
@@ -104,7 +89,7 @@ gulp.task("scripts", () => {
     .pipe(gulp.dest("js/dist"));
 });
 
-gulp.task("build-styles", gulp.series("scss", "scsslint"));
+gulp.task("build-styles", gulp.series("scss"));
 gulp.task("build-scripts", gulp.series("scripts", "eslint"));
 
 gulp.task("watch", () => {
