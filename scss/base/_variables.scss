@@ -1,21 +1,21 @@
 // Color variables
 $c-black: #000000; // RGB 0, 0, 0
 $c-gray-6: #666666;
+$c-gray-3: #333333;
 $c-white: #ffffff; // RGB 255, 255, 255
 
 // Font-related variables
-$font-family-serif: "Georgia", serif;
-$font-family-sans: "Helvetica", sans-serif;
-$font-family-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$font-copy: 'Open Sans', sans-serif;
+$font-display: 'Dosis', sans-serif;
 
-$font-size-base: 16; // The default font size for your site. This gets used in
-// the px-to-em() function used sitewide.
-$font-weight-normal: 400; // Usually
-$font-weight-bold: 700; // Usually
+
+$font-size-base: 20;
+$font-weight-normal: 300;
+// $font-weight-bold: 700;
 
 // Breakpoints
 $breakpoints: (
-  sm: px-to-rem(480),
-  md: px-to-rem(768),
-  lg: px-to-rem(960)
+  sm: 30em, // 480px
+  md: 48em, // 768px
+  lg: 60em // 960px
 );

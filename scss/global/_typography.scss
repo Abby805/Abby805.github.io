@@ -12,32 +12,41 @@ html {
 
 body {
   margin: 0;
+  font-family: $font-copy;
+  font-weight: $font-weight-normal;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h5 {
+  @extend %headline;
+  line-height: 1.2;
 }
 
 // Adding the h1-style, etc. classes for use in cases when the design doesn't
 // match what the tag ought to be, semantically.
-h1,
-%h1-style {
+h1 {
+  font-size: px-to-rem(48);
 }
 
-h2,
-%h2-style {
+h2 {
+  font-size: px-to-rem(36);
 }
 
-h3,
-%h3-style {
+h3 {
+
 }
 
-h4,
-%h4-style {
+h4 {
+
 }
 
-h5,
-%h5-style {
+h5 {
+
 }
 
-h6,
-%h6-style {
+h6 {
+
 }
 
 blockquote,
@@ -66,10 +75,10 @@ dt {
 dd {
 }
 
-b,
-strong {
-  // font-weight: $font-weight-bold;
-}
+// b,
+// strong {
+//   font-weight: $font-weight-bold;
+// }
 
 i,
 em {
@@ -81,6 +90,7 @@ u {
 }
 
 p {
+  line-height: 1.8;
 }
 
 ol,

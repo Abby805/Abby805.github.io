@@ -41,7 +41,7 @@ textarea {
   vertical-align: top;
   margin: 0;
   max-width: 100%;
-  font-family: $font-family-sans;
+  font-family: $font-copy;
   font-size: px-to-rem(16);
 
   @include placeholder {
