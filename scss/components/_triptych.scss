@@ -1,0 +1,41 @@
+// Capabilities
+
+.triptych {
+  @include bp(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.triptych-panel {
+  position: relative;
+  margin-bottom: px-to-rem(20);
+  border-bottom: solid px-to-rem(5) $c-blue-lt;
+  background: $c-white;
+  box-shadow: 0px 1px 5px 0px rgba($c-blue-lt, 0.5);
+
+  @include bp(md) {
+    flex: 0 0 calc(33.33% - 13.33px);
+    width: calc(33.33% - 13.33px);
+    max-width: calc(33.33% - 13.33px);
+    margin-bottom: 0;
+  }
+}
+
+.triptych-img,
+.triptych-text h2 {
+  text-align: center;
+}
+
+.triptych-text p {
+  margin-bottom: 0;
+}
+
+.triptych-img {
+  padding: px-to-rem(30);
+  line-height: 0;
+}
+
+.triptych-text {
+  padding: 0 px-to-rem(20) px-to-rem(30);
+}

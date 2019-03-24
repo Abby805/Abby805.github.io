@@ -20,7 +20,9 @@ body {
 
 h1, h2, h3, h4, h5, h5 {
   @extend %headline;
+  margin: 0 0 px-to-rem(20);
   line-height: 1.2;
+  color: $c-gray-3;
 }
 
 // Adding the h1-style, etc. classes for use in cases when the design doesn't

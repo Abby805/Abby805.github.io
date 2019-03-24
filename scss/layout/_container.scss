@@ -1,7 +1,7 @@
 // Containers
 
 .container {
-  padding: px-to-rem(20);
+  padding: 0 px-to-rem(20);
 
   @include bp(lg) {
     width: 80%;
