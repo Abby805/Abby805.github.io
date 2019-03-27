@@ -16,13 +16,13 @@ body {
   font-weight: $font-weight-normal;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
+  color: $c-gray-3;
 }
 
 h1, h2, h3, h4, h5, h5 {
   @extend %headline;
   margin: 0 0 px-to-rem(20);
   line-height: 1.2;
-  color: $c-gray-3;
 }
 
 // Adding the h1-style, etc. classes for use in cases when the design doesn't
@@ -77,10 +77,10 @@ dt {
 dd {
 }
 
-// b,
-// strong {
-//   font-weight: $font-weight-bold;
-// }
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
 
 i,
 em {
@@ -102,11 +102,11 @@ ul {
 
 // Prevents bullet styling applying to menus, etc.
 // Using .main as example; scope selectors as needed
-.main ul {
+ul {
   @extend %bullets;
 }
 
-.main ol {
+ol {
   @extend %numbers;
 }
 
@@ -144,7 +144,13 @@ abbr[title] {
   outline: none;
 }
 
-a {
+a:not(.btn) {
+  position: relative;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  color: $c-orange-dk;
+  border-bottom: solid px-to-rem(2) currentColor;
+
   &:hover,
   &:focus {
   }

@@ -10,7 +10,8 @@ var gulp = require("gulp"),
   plumber = require("gulp-plumber"),
   sassGlob = require("gulp-sass-glob"),
   babel = require("gulp-babel"),
-  beeper = require("beeper");
+  beeper = require("beeper"),
+  server = require("gulp-webserver");
 
 // Paths
 var paths = {
@@ -93,13 +94,11 @@ gulp.task("build-styles", gulp.series("scss"));
 gulp.task("build-scripts", gulp.series("scripts", "eslint"));
 
 gulp.task("watch", () => {
+  gulp.src('./').pipe(server({ livereload: true, open: true }));
   gulp.watch(paths.styles, gulp.series("build-styles"));
   gulp.watch(paths.scripts, gulp.series("build-scripts"));
 });
 
-gulp.task(
-  "build",
-  gulp.parallel("build-styles", "build-scripts")
-);
+gulp.task("build", gulp.parallel("build-styles", "build-scripts"));
 
 gulp.task("default", gulp.parallel("build-styles", "watch"));

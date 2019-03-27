@@ -36,7 +36,7 @@
 
   li {
     position: relative;
-    margin-bottom: px-to-rem(20);
+    margin-bottom: px-to-rem(10);
 
     &:before {
       margin-left: px-to-rem(-30);
@@ -58,6 +58,8 @@
 
   li:before {
     content: '\2022'; // bullets
+    font-size: px-to-rem(30);
+    line-height: 1;
   }
 } //bullets
 

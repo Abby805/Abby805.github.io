@@ -4,17 +4,17 @@ $c-white: #ffffff; // RGB 255, 255, 255
 
 // Scheme 1
 // $c-purple: #3D2B49;
-// $c-red: #69140E;
-// $c-orange-dk: #A44200;
-// $c-orange-lt: #D58936;
+$c-red: #69140E;
+$c-orange-dk: #A44200;
+$c-orange-lt: #D58936;
 // $c-yellow: #FFFB46;
 
 // Scheme 2
-$c-purple-lt: #6a4e77;
-$c-blue-dk: #1d3461;
-$c-blue-md: #2a427f;
+// $c-purple-lt: #6a4e77;
+// $c-blue-dk: #1d3461;
+// $c-blue-md: #2a427f;
 $c-blue-lt: #446b9e;
-$c-purple-dk: #2b193d;
+// $c-purple-dk: #2b193d;
 
 // Font-related variables
 $font-copy: 'Open Sans', sans-serif;
@@ -23,6 +23,7 @@ $font-display: 'Dosis', sans-serif;
 
 $font-size-base: 18;
 $font-weight-normal: 300;
+$font-weight-bold: 600;
 
 // Breakpoints
 $breakpoints: (
