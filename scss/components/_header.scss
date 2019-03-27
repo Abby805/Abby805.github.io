@@ -1,0 +1,45 @@
+// Logo
+.site-header {
+  text-align: center;
+  line-height: 0;
+  background: $c-blue-dk;
+
+  @include bp(md) {
+    padding: px-to-rem(50) 0 px-to-rem(10);
+  }
+}
+
+
+.site-logo {
+  width: px-to-rem(250);
+  height: auto;
+}
+
+.tri {
+  transition: 0.3s ease all;
+  stroke: $c-white;
+  stroke-width: 1px;
+  fill: $c-white;
+  transform: none;
+  transform-box: fill-box;
+
+  .site-logo:hover & {
+    &:nth-child(odd) {
+      transform: rotate(-4deg);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(3n) {
+      fill: lighten($c-blue-lt, 20%);
+      stroke: lighten($c-blue-lt, 20%);
+    }
+
+    &:nth-child(3n + 2) {
+      fill: lighten($c-blue-lt, 40%);
+      stroke: lighten($c-blue-lt, 40%);
+    }
+  }
+}

@@ -1,6 +1,9 @@
 // Capabilities
 
 .triptych {
+  padding-top: px-to-rem(20);
+  padding-bottom: px-to-rem(20);
+
   @include bp(md) {
     display: flex;
     justify-content: space-between;
