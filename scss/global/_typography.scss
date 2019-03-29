@@ -28,11 +28,20 @@ h1, h2, h3, h4, h5, h5 {
 // Adding the h1-style, etc. classes for use in cases when the design doesn't
 // match what the tag ought to be, semantically.
 h1 {
-  font-size: px-to-rem(48);
+  margin-bottom: 0;
+  font-size: px-to-rem(36);
+
+  @include bp(md) {
+    font-size: px-to-rem(48);
+  }
 }
 
 h2 {
-  font-size: px-to-rem(36);
+  font-size: px-to-rem(32);
+
+  @include bp(md) {
+    font-size: px-to-rem(36);
+  }
 }
 
 h3 {

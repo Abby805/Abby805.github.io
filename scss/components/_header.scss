@@ -1,45 +1,25 @@
 // Logo
 .site-header {
-  text-align: center;
-  line-height: 0;
-  background: $c-blue-dk;
+  padding: px-to-rem(20) 0;
+  background: linear-gradient($c-blue-dk, $c-blue-lt);
+  color: $c-white;
 
   @include bp(md) {
-    padding: px-to-rem(50) 0 px-to-rem(10);
+    padding: px-to-rem(40) 0;
   }
 }
 
+.h1--name,
+.h1--title {
+  display: block;
 
-.site-logo {
-  width: px-to-rem(250);
-  height: auto;
+  @include bp(sm) {
+    display: inline;
+  }
 }
 
-.tri {
-  transition: 0.3s ease all;
-  stroke: $c-white;
-  stroke-width: 1px;
-  fill: $c-white;
-  transform: none;
-  transform-box: fill-box;
-
-  .site-logo:hover & {
-    &:nth-child(odd) {
-      transform: rotate(-4deg);
-    }
-
-    &:nth-child(even) {
-      transform: rotate(4deg);
-    }
-
-    &:nth-child(3n) {
-      fill: lighten($c-blue-lt, 20%);
-      stroke: lighten($c-blue-lt, 20%);
-    }
-
-    &:nth-child(3n + 2) {
-      fill: lighten($c-blue-lt, 40%);
-      stroke: lighten($c-blue-lt, 40%);
-    }
+.h1--name:after {
+  @include bp(sm) {
+    content: ':';
   }
 }
