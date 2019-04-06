@@ -23,6 +23,10 @@
     max-width: calc(33.33% - 13.33px);
     margin-bottom: 0;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .triptych-img,
