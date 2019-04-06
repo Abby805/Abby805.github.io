@@ -1,14 +1,21 @@
 // Color variables
-$c-black: #1a1a1a;
+$c-gray-3: #333333;
 $c-white: #ffffff;
-$c-salmon: #ff3131;
+$c-blue-dk: #1d3461;
+$c-blue-lt: #446b9e;
 
 // Font-related variables
+$font-copy: 'Open Sans', sans-serif;
+$font-display: 'Dosis', sans-serif;
+$font-icon: 'icons';
 
-$font-main: 'Raleway', 'Helvetica', 'Arial';
-$font-size-base: 16; // The default font size for your site. This gets used in
-// the px-to-em() function used sitewide.
-$font-weight-normal: 400;
+$font-size-base: 18;
+$font-weight-normal: 300;
+$font-weight-bold: 600;
 
-// Breakpoint variables
-$bp-sm: 35em; //560px
+// Breakpoints
+$breakpoints: (
+  sm: 32em, // 512px
+  md: 48em, // 768px
+  lg: 60em // 960px
+);

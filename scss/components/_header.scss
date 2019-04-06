@@ -1,0 +1,23 @@
+// Logo
+.site-header {
+  padding: px-to-rem(20) 0;
+  background: linear-gradient($c-blue-dk, $c-blue-lt);
+  color: $c-white;
+
+  @include bp(md) {
+    padding: px-to-rem(40) 0;
+  }
+}
+
+.h1--name,
+.h1--title {
+  display: block;
+}
+
+.h1--title {
+  font-size: px-to-rem(20);
+
+  @include bp(md) {
+    font-size: px-to-rem(27);
+  }
+}

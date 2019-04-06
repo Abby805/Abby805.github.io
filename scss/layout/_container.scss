@@ -1,0 +1,10 @@
+// Containers
+
+.container {
+  padding: 0 px-to-rem(20);
+
+  @include bp(lg) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
