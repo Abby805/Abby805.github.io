@@ -12,14 +12,12 @@
 .h1--name,
 .h1--title {
   display: block;
-
-  @include bp(sm) {
-    display: inline;
-  }
 }
 
-.h1--name:after {
-  @include bp(sm) {
-    content: ':';
+.h1--title {
+  font-size: px-to-rem(20);
+
+  @include bp(md) {
+    font-size: px-to-rem(27);
   }
 }

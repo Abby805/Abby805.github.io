@@ -21,6 +21,7 @@
   @extend %icon;
   display: flex;
   padding: 0;
+  margin-bottom: px-to-rem(20)
 }
 
 .social-icons li {
@@ -33,23 +34,13 @@
   display: block;
   padding: px-to-rem(20) 0;
   border-bottom: none;
+  font-size: px-to-rem(24);
   font-weight: $font-weight-normal;
-  color: $c-white;
+  color: $c-blue-lt;
   transition: 0.5s ease all;
-}
 
-.social-icons li:nth-child(odd) a {
-  background: $c-blue-lt;
-}
-
-.social-icons li:nth-child(even) a {
-  background: #f00; // @todo update this obviously
-}
-
-.social-icons li:nth-child(odd) a,
-.social-icons li:nth-child(even) a {
   &:hover,
   &:focus {
-    background: $c-blue-dk;
+    color: $c-blue-dk;
   }
 }
