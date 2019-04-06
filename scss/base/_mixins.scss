@@ -25,19 +25,3 @@
     // sass-lint:enable no-warn
   }
 }
-
-// Placeholder text
-@mixin placeholder {
-  &:-moz-placeholder { @content; }
-  &::-moz-placeholder { @content; }
-  &::-webkit-input-placeholder { @content; }
-}
-
-// Flex column width
-// Feed it a number 1-100 to use as a percentage (without the % symbol)
-@mixin flex-col($int) {
-  $per: $int * 1%;
-  flex: 0 0 $per;
-  width: $per;
-  max-width: $per;
-}

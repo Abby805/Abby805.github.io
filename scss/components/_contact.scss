@@ -36,11 +36,5 @@
   border-bottom: none;
   font-size: px-to-rem(24);
   font-weight: $font-weight-normal;
-  color: $c-blue-lt;
   transition: 0.5s ease all;
-
-  &:hover,
-  &:focus {
-    color: $c-blue-dk;
-  }
 }
