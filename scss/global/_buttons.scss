@@ -38,6 +38,7 @@ button:-moz-focusring,
   border: none;
   display: inline-block;
   max-width: 100%;
+  padding: px-to-rem(10) px-to-rem(30);
   text-align: center;
   text-decoration: none;
   background-image: none;
@@ -45,11 +46,15 @@ button:-moz-focusring,
   touch-action: manipulation;
   cursor: pointer;
   user-select: none;
+  font-weight: $font-weight-bold;
+  background: $c-blue-lt;
+  color: $c-white;
+  transition: 0.5s ease all;
 
   &:hover,
   &:focus {
-  }
-
-  &:active {
+    border-bottom: none;
+    background: $c-blue-dk;
+    color: $c-white;
   }
 }

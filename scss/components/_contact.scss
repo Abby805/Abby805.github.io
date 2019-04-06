@@ -1,0 +1,55 @@
+.contact {
+  text-align: center;
+}
+
+.email-btn {
+  width: 100%;
+}
+
+.email-btn,
+.social-icons {
+  @include bp(sm) {
+    width: 50%;
+    margin: 0 auto;
+  }
+  @include bp(md) {
+    width: calc(33.33% - 13.33px);
+  }
+}
+
+.social-icons {
+  @extend %icon;
+  display: flex;
+  padding: 0;
+}
+
+.social-icons li {
+  flex: 0 0 20%;
+  width: 20%;
+  max-width: 20%;
+}
+
+.social-icons a {
+  display: block;
+  padding: px-to-rem(20) 0;
+  border-bottom: none;
+  font-weight: $font-weight-normal;
+  color: $c-white;
+  transition: 0.5s ease all;
+}
+
+.social-icons li:nth-child(odd) a {
+  background: $c-blue-lt;
+}
+
+.social-icons li:nth-child(even) a {
+  background: #f00; // @todo update this obviously
+}
+
+.social-icons li:nth-child(odd) a,
+.social-icons li:nth-child(even) a {
+  &:hover,
+  &:focus {
+    background: $c-blue-dk;
+  }
+}

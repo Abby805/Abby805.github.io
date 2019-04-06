@@ -1,5 +1,14 @@
 // Global typography defaults. If these need to be overridden in a specific
 // instance, it should be done in a "components" partial
+@font-face {
+  font-family: 'icons';
+  src: url('../../fonts/icomoon.eot');
+  src: url('../../fonts/icomoon.eot?#iefix') format('eot'),
+  url('../../fonts/icomoon.woff') format('woff'),
+  url('../../fonts/icomoon.ttf') format('truetype'),
+  url('../../fonts/icomoon.svg#icons') format('svg');
+}
+
 html {
   // You should ALWAYS have this line, unchanged.
   // The px-to-rem function depends on it.
@@ -109,16 +118,6 @@ ul {
   list-style: none;
 }
 
-// Prevents bullet styling applying to menus, etc.
-// Using .main as example; scope selectors as needed
-ul {
-  @extend %bullets;
-}
-
-ol {
-  @extend %numbers;
-}
-
 sub,
 sup {
   position: relative;
@@ -153,17 +152,16 @@ abbr[title] {
   outline: none;
 }
 
-a:not(.btn) {
+a {
   position: relative;
   font-weight: $font-weight-bold;
   text-decoration: none;
-  color: $c-orange-dk;
+  color: $c-blue-link;
   border-bottom: solid px-to-rem(2) currentColor;
 
   &:hover,
   &:focus {
-  }
-
-  &:focus {
+    color: $c-blue-dk;
+    border-bottom-style: dotted;
   }
 }
