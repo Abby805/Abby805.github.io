@@ -1,6 +1,5 @@
 var gulp = require("gulp"),
   sass = require("gulp-sass"),
-  eslint = require("gulp-eslint"),
   cache = require("gulp-cached"),
   prefix = require("autoprefixer"),
   notify = require("gulp-notify"),
@@ -9,14 +8,12 @@ var gulp = require("gulp"),
   cssnano = require("gulp-cssnano"),
   plumber = require("gulp-plumber"),
   sassGlob = require("gulp-sass-glob"),
-  babel = require("gulp-babel"),
   beeper = require("beeper"),
   server = require("gulp-webserver");
 
 // Paths
 var paths = {
-  styles: ["scss/**/*.scss"],
-  scripts: ["js/*.js"]
+  styles: ["scss/**/*.scss"]
 };
 
 gulp.task("scss", () => {
@@ -49,56 +46,13 @@ gulp.task("scss", () => {
     .pipe(gulp.dest("css"));
 });
 
-gulp.task("eslint", () => {
-  return gulp
-    .src(paths.scripts)
-    .pipe(
-      eslint({
-        parser: "babel-eslint",
-        rules: {
-          "no-mutable-exports": 0
-        },
-        globals: ["jQuery", "$"],
-        envs: ["browser"]
-      })
-    )
-    .pipe(eslint.format());
-});
-
-gulp.task("scripts", () => {
-  return gulp
-    .src(paths.scripts)
-    .pipe(
-      plumber({
-        errorHandler: function(err) {
-          notify.onError({
-            title: "Gulp error in " + err.plugin,
-            message: err.toString()
-          })(err);
-          beeper();
-        }
-      })
-    )
-    .pipe(
-      babel({
-        presets: ["env"]
-      })
-    )
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write("./maps"))
-    .pipe(gulp.dest("js/dist"));
-});
-
 gulp.task("build-styles", gulp.series("scss"));
-gulp.task("build-scripts", gulp.series("scripts", "eslint"));
 
 gulp.task("watch", () => {
   gulp.src('./').pipe(server({ livereload: true, open: true }));
   gulp.watch(paths.styles, gulp.series("build-styles"));
-  gulp.watch(paths.scripts, gulp.series("build-scripts"));
 });
 
-gulp.task("build", gulp.parallel("build-styles", "build-scripts"));
+gulp.task("build", gulp.parallel("build-styles"));
 
 gulp.task("default", gulp.parallel("build-styles", "watch"));

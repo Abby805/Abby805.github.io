@@ -5,3 +5,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+// The svg sprite source - we hide the original and show the parts we
+// we want through `use`
+.svg-sprite {
+  display: none;
+}
