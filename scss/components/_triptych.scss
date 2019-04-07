@@ -43,6 +43,13 @@
   line-height: 0;
 }
 
+.triptych-icon {
+  display: block;
+  margin: 0 auto;
+  width: px-to-rem(156);
+  height: px-to-rem(156);
+}
+
 .triptych-text {
   padding: 0 px-to-rem(20) px-to-rem(30);
 }
