@@ -1,23 +1,56 @@
 // Logo
 .site-header {
   padding: px-to-rem(20) 0;
-  background: linear-gradient($c-blue-dk, $c-blue-lt);
+  background: $c-gray-lt;
   color: $c-white;
+}
+
+.site-title {
+  width: 200px;
+  margin: 0 auto;
+  line-height: 0;
 
   @include bp(md) {
-    padding: px-to-rem(40) 0;
+    margin-left: 0;
   }
 }
 
-.h1--name,
-.h1--title {
-  display: block;
-}
-
-.h1--title {
-  font-size: px-to-rem(20);
+.logo--svg {
+  width: 100%;
+  height: auto;
 
   @include bp(md) {
-    font-size: px-to-rem(27);
+    margin-left: -7.14%;
+  }
+}
+
+.tri {
+  transition: 0.3s ease all;
+  stroke: $c-white;
+  stroke-width: 1px;
+  fill: $c-white;
+  transform: none;
+  transform-box: fill-box;
+
+  .site-title:hover &,
+  .site-title:focus & {
+
+    &:nth-child(odd) {
+      transform: rotate(-4deg);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(3n) {
+      fill: darken($c-white, 10%);
+      stroke: darken($c-white, 10%);
+    }
+
+    &:nth-child(3n + 2) {
+      fill: darken($c-white, 5%);
+      stroke: darken($c-white, 5%);
+    }
   }
 }
