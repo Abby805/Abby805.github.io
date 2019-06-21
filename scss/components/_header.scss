@@ -1,12 +1,16 @@
 // Logo
 .site-header {
-  padding: px-to-rem(20) 0;
+  padding: px-to-rem(10) 0;
   background: $c-gray-lt;
   color: $c-white;
+
+  @include bp(md) {
+    padding: px-to-rem(20) 0;
+  }
 }
 
 .site-title {
-  width: 200px;
+  width: px-to-rem(250);
   margin: 0 auto;
   line-height: 0;
 
