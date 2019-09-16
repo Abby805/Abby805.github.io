@@ -1,3 +1,13 @@
-// Layout
+body {
+  overflow-x: hidden;
+}
 
-@import 'container';
+.intro-text {
+  max-width: px-to-rem(1320);
+  padding: 0 px-to-rem(20);
+  margin: px-to-rem(40) auto;
+
+  @include breakpoint($bp-sm) {
+    margin: px-to-rem(40) auto px-to-rem(60);
+  }
+}

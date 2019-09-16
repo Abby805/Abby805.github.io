@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["example-js.js"],"sourcesContent":["\"use strict\";\n\nvar doConsoleLog = function doConsoleLog() {\n  console.log('Whatup');\n};\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  doConsoleLog();\n});"],"file":"../example-js.js"}
