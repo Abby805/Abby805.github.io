@@ -1,29 +1,31 @@
 // Global typography defaults. If these need to be overridden in a specific
 // instance, it should be done in a "components" partial
+.home {
+  & {
+    font-family: $font-main;
+    font-size: ($font-size-base/16) * 100%;
+    line-height: 1.6;
+    background: $c-black;
+    color: $c-white;
+  }
 
-body {
-  font-family: $font-main;
-  font-size: ($font-size-base/16) * 100%;
-  line-height: 1.6;
-  background: $c-black;
-  color: $c-white;
-}
+  h1 {
+    margin-bottom: px-to-rem(20);
+    font-size: px-to-rem(32);
+    color: $c-salmon;
 
-h1 {
-  margin-bottom: px-to-rem(20);
-  font-size: px-to-rem(32);
-  color: $c-salmon;
+    @include breakpoint($bp-sm) {
+      font-size: px-to-rem(48);
+    }
+  }
 
-  @include breakpoint($bp-sm) {
-    font-size: px-to-rem(48);
+  p {
+    @include breakpoint($bp-sm) {
+      font-size: px-to-rem(20);
+    }
   }
 }
 
-p {
-  @include breakpoint($bp-sm) {
-    font-size: px-to-rem(20);
-  }
-}
 
 .intro-text p:after {
   content: '';

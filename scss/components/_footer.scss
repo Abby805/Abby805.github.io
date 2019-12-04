@@ -1,19 +1,21 @@
-.footer {
-  padding: px-to-rem(60) px-to-rem(20);
-  border-bottom: 3px solid $c-salmon;
-  text-align: center;
-}
+.home {
+  .footer {
+    padding: px-to-rem(60) px-to-rem(20);
+    border-bottom: 3px solid $c-salmon;
+    text-align: center;
+  }
 
-.footer p {
-  margin-bottom: px-to-rem(20);
-}
+  .footer p {
+    margin-bottom: px-to-rem(20);
+  }
 
-.footer a {
-  text-decoration: none;
-  color: inherit;
+  .footer a {
+    text-decoration: none;
+    color: inherit;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 }

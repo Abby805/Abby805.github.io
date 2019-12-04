@@ -1,0 +1,60 @@
+// Media Row - Two Equal Images
+//
+// <div class="media-row mr-2-equal">
+//   <figure>
+//     <img src="fooooo.jpg" alt="Foo." />
+//     <img src="barrrr.jpg" alt="Bar." />
+
+//     <figcaption>
+//       <p><strong>Left:</strong>Blah blah blah.</p>
+//       <p><strong>Right:</strong>Yada yada yada.</p>
+//     </figcaption>
+//   </figure>
+// </div>
+
+.mr-2-equal figure {
+  // @TODO make it responsive, derp.
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+$halfspace: px-to-rem(10);
+
+.mr-2-equal img {
+  display: block;
+  margin-bottom: px-to-rem(20);
+  width: calc(50% - #{$halfspace});
+  flex: 0 0 calc(50% - #{$halfspace});
+}
+
+.mr-2-equal figcaption {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+
+.mr-2-equal {
+  outline: solid 10px red;
+}
+
+
+// .mr-fullscreen__img {
+//   position: absolute;
+//   object-fit: cover;
+//   width: 100%;
+//   height: 100%;
+//   max-width: none;
+// }
+
+// .mr-fullscreen__text {
+//   // @TODO make this a wider percentage on smaller screens
+//   // @TODO helper classess for dark/light and top/bottom
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   max-width: 50%;
+//   padding: px-to-rem(20);
+//   transform: translateX(-50%);
+//   text-align: center;
+// }

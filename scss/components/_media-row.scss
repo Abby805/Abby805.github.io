@@ -1,0 +1,25 @@
+// Media Row - Global properties & modifiers
+
+// Common margins & padding
+.media-row {
+  margin-bottom: px-to-rem(20);
+}
+
+.media-row:not(.mr-fullscreen) {
+  padding-left: px-to-rem(20);
+  padding-right: px-to-rem(20);
+}
+
+// Widths
+.mr-medium {
+  max-width: px-to-rem(1080);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.mr-narrow {
+  max-width: px-to-rem(640);
+  margin-left: auto;
+  margin-right: auto;
+}
