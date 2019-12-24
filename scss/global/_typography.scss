@@ -26,6 +26,12 @@
   }
 }
 
+body {
+  font-family: $font-main;
+  font-size: ($font-size-base/16) * 100%;
+  line-height: 1.6;
+}
+
 
 .intro-text p:after {
   content: '';

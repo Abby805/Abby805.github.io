@@ -11,15 +11,16 @@
 }
 
 // Widths
+.mr-narrow,
 .mr-medium {
-  max-width: px-to-rem(1080);
   margin-left: auto;
   margin-right: auto;
 }
 
+.mr-medium {
+  max-width: px-to-rem(1080);
+}
 
 .mr-narrow {
   max-width: px-to-rem(640);
-  margin-left: auto;
-  margin-right: auto;
 }

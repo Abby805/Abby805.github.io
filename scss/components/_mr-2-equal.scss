@@ -12,49 +12,55 @@
 //   </figure>
 // </div>
 
-.mr-2-equal figure {
-  // @TODO make it responsive, derp.
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.media-row figure {
+  @include bp($bp-sm) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 }
-
-$halfspace: px-to-rem(10);
 
 .mr-2-equal img {
+  @include bp($bp-sm) {
+    width: calc(50% - #{$halfspace});
+    flex: 0 0 calc(50% - #{$halfspace});
+  }
+}
+
+.mr-3-equal img {
+  @include bp($bp-sm) {
+    width: calc(33.33% - (#{$gutter} * 2 / 3));
+    flex: 0 0 calc(33.33% - (#{$gutter} * 2 / 3));
+  }
+}
+
+.media-row figcaption {
+  @include bp($bp-sm) {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+.media-row img {
   display: block;
   margin-bottom: px-to-rem(20);
-  width: calc(50% - #{$halfspace});
-  flex: 0 0 calc(50% - #{$halfspace});
-}
-
-.mr-2-equal figcaption {
-  width: 100%;
-  flex: 0 0 100%;
 }
 
 
-.mr-2-equal {
-  outline: solid 10px red;
+// Wide tall and tall wide
+.mr-wide-tall img:first-child,
+.mr-tall-wide img + img {
+  @include bp($bp-sm) {
+    width: calc((100% - #{$gutter}) * 2.2556 / 3.2556);
+    flex: 0 0 calc((100% - #{$gutter}) * 2.2556 / 3.2556);
+  }
 }
 
-
-// .mr-fullscreen__img {
-//   position: absolute;
-//   object-fit: cover;
-//   width: 100%;
-//   height: 100%;
-//   max-width: none;
-// }
-
-// .mr-fullscreen__text {
-//   // @TODO make this a wider percentage on smaller screens
-//   // @TODO helper classess for dark/light and top/bottom
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   max-width: 50%;
-//   padding: px-to-rem(20);
-//   transform: translateX(-50%);
-//   text-align: center;
-// }
+.mr-wide-tall img + img,
+.mr-tall-wide img:first-child {
+  @include bp($bp-sm) {
+    width: calc((100% - #{$gutter}) / 3.24);
+    flex: 0 0 calc((100% - #{$gutter}) / 3.24);
+  }
+}

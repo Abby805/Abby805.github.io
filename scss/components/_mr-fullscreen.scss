@@ -29,8 +29,22 @@
   position: absolute;
   top: 0;
   left: 50%;
-  max-width: 50%;
+  max-width: 80%;
   padding: px-to-rem(20);
   transform: translateX(-50%);
   text-align: center;
+
+  @include bp($bp-sm) {
+    max-width: 50%;
+  }
+}
+
+
+.mr-fullscreen__text--light {
+  color: $c-white;
+}
+
+.mr-fullscreen__text--bottom {
+  top: auto;
+  bottom: 0;
 }
