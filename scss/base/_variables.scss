@@ -5,10 +5,20 @@ $c-salmon: #ff3131;
 
 // Font-related variables
 
-$font-main: 'Raleway', 'Helvetica', 'Arial';
-$font-size-base: 16; // The default font size for your site. This gets used in
+
+
+
+
+
+$font-serif: 'Crimson Text', serif;
+$font-sans: 'Mukta', sans-serif;
+
+$font-main: $font-sans;
+$font-size-base: 18; // The default font size for your site. This gets used in
 // the px-to-em() function used sitewide.
-$font-weight-normal: 400;
+$font-weight-normal: 400; // The only serif weight
+$font-weight-light: 300; // 'Normal' for sans
+$font-weight-bold: 700; // Sans only
 
 // Breakpoint variables
 $bp-sm: 560px;

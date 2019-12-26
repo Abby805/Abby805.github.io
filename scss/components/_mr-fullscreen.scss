@@ -24,10 +24,8 @@
 }
 
 .mr-fullscreen__text {
-  // @TODO make this a wider percentage on smaller screens
-  // @TODO helper classess for dark/light and top/bottom
   position: absolute;
-  top: 0;
+  top: px-to-rem(40);
   left: 50%;
   max-width: 80%;
   padding: px-to-rem(20);
@@ -46,5 +44,5 @@
 
 .mr-fullscreen__text--bottom {
   top: auto;
-  bottom: 0;
+  bottom: px-to-rem(40);
 }

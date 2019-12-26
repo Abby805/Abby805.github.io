@@ -2,7 +2,7 @@
 
 // Common margins & padding
 .media-row {
-  margin-bottom: px-to-rem(20);
+  margin-bottom: px-to-rem(60);
 }
 
 .media-row:not(.mr-fullscreen) {
@@ -23,4 +23,24 @@
 
 .mr-narrow {
   max-width: px-to-rem(640);
+}
+
+.label,
+.label-desktop,
+.label-mobile {
+  font-weight: $font-weight-bold;
+}
+
+.label-desktop {
+  display: none;
+
+  @include bp($bp-sm) {
+    display: inline;
+  }
+}
+
+.label-mobile {
+  @include bp($bp-sm) {
+    display: none;
+  }
 }
