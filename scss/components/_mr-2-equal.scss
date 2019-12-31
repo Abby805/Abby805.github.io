@@ -13,7 +13,7 @@
 // </div>
 
 .media-row figure {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,21 +22,21 @@
 }
 
 .mr-2-equal img {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     width: calc(50% - #{$halfspace});
     flex: 0 0 calc(50% - #{$halfspace});
   }
 }
 
 .mr-3-equal img {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     width: calc(33.33% - (#{$gutter} * 2 / 3));
     flex: 0 0 calc(33.33% - (#{$gutter} * 2 / 3));
   }
 }
 
 .media-row figcaption {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     width: 100%;
     flex: 0 0 100%;
   }
@@ -51,7 +51,7 @@
 // Wide tall and tall wide
 .mr-wide-tall img:first-child,
 .mr-tall-wide img + img {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     width: calc((100% - #{$gutter}) * 2.2556 / 3.2556);
     flex: 0 0 calc((100% - #{$gutter}) * 2.2556 / 3.2556);
   }
@@ -59,7 +59,7 @@
 
 .mr-wide-tall img + img,
 .mr-tall-wide img:first-child {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     width: calc((100% - #{$gutter}) / 3.24);
     flex: 0 0 calc((100% - #{$gutter}) / 3.24);
   }

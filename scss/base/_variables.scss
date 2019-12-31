@@ -22,6 +22,7 @@ $font-weight-bold: 700; // Sans only
 
 // Breakpoint variables
 $bp-sm: 560px;
+$bp-md: 768px;
 
 // Time out for a function
 @function px-to-rem($number) {

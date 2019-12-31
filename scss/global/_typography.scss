@@ -35,7 +35,7 @@ b {
 h1 {
   font-size: px-to-rem(32);
 
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     font-size: px-to-rem(54);
   }
 }
@@ -43,7 +43,7 @@ h1 {
 p {
   margin-bottom: px-to-rem(20);
 
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     font-size: px-to-rem(22);
   }
 }
@@ -57,10 +57,14 @@ figcaption {
     display: block;
     position: absolute;
     left: 50%;
-    width: px-to-rem(100);
-    margin-left: px-to-rem(-50);
+    // width: px-to-rem(100);
+    width: 0;
+    height: 0;
+    margin-left: px-to-rem(-15);
     bottom: 0;
-    border-bottom: solid px-to-rem(1) #aaa;
+    border-top-width: 0;
+    border: solid transparent px-to-rem(12);
+    border-bottom: solid px-to-rem(15) #aaa;
   }
 }
 

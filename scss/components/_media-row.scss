@@ -34,13 +34,13 @@
 .label-desktop {
   display: none;
 
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     display: inline;
   }
 }
 
 .label-mobile {
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     display: none;
   }
 }

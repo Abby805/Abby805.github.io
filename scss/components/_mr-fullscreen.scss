@@ -32,11 +32,10 @@
   transform: translateX(-50%);
   text-align: center;
 
-  @include bp($bp-sm) {
+  @include bp($bp-md) {
     max-width: 50%;
   }
 }
-
 
 .mr-fullscreen__text--light {
   color: $c-white;
