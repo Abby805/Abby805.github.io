@@ -1,1 +1,20 @@
-// Stuff goes here I guess
+// Page header
+.page-header {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: px-to-rem(20);
+}
+
+.logo-link {
+  display: block;
+  width: px-to-rem(100);
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.logo polygon {
+  fill: var(--page-logo);
+}

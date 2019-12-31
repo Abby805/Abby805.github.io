@@ -1,16 +1,4 @@
-// Media Row - Two Equal Images
-//
-// <div class="media-row mr-2-equal">
-//   <figure>
-//     <img src="fooooo.jpg" alt="Foo." />
-//     <img src="barrrr.jpg" alt="Bar." />
-
-//     <figcaption>
-//       <p><strong>Left:</strong>Blah blah blah.</p>
-//       <p><strong>Right:</strong>Yada yada yada.</p>
-//     </figcaption>
-//   </figure>
-// </div>
+// Media Row - Various layouts
 
 .media-row figure {
   @include bp($bp-md) {
@@ -46,7 +34,6 @@
   display: block;
   margin-bottom: px-to-rem(20);
 }
-
 
 // Wide tall and tall wide
 .mr-wide-tall img:first-child,

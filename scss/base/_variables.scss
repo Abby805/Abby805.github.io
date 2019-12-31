@@ -3,13 +3,13 @@ $c-black: #1a1a1a;
 $c-white: #ffffff;
 $c-salmon: #ff3131;
 
+// This will be overridden per page
+:root {
+  --page-accent: $c-black;
+  --page-logo: $c-white;
+}
+
 // Font-related variables
-
-
-
-
-
-
 $font-serif: 'Crimson Text', serif;
 $font-sans: 'Mukta', sans-serif;
 
