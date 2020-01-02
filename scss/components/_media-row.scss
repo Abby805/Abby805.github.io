@@ -2,7 +2,23 @@
 
 // Common margins & padding
 .media-row {
+  position: relative;
   margin-bottom: px-to-rem(60);
+  padding-bottom: px-to-rem(20);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: px-to-rem(-15);
+    bottom: 0;
+    border-top-width: 0;
+    border: solid transparent px-to-rem(12);
+    border-bottom: solid px-to-rem(15) var(--page-accent);
+  }
 }
 
 .media-row:not(.mr-fullscreen) {
@@ -27,22 +43,7 @@
 
 // Captions
 figcaption {
-  position: relative;
-  padding: px-to-rem(10) px-to-rem(20) px-to-rem(20);
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50%;
-    width: 0;
-    height: 0;
-    margin-left: px-to-rem(-15);
-    bottom: 0;
-    border-top-width: 0;
-    border: solid transparent px-to-rem(12);
-    border-bottom: solid px-to-rem(15) var(--page-accent);
-  }
+  padding: px-to-rem(10) px-to-rem(20) 0;
 }
 
 figcaption p {
