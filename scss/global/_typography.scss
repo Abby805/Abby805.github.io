@@ -34,6 +34,7 @@ b {
 
 h1 {
   font-size: px-to-rem(32);
+  line-height: 1.1;
 
   @include bp($bp-md) {
     font-size: px-to-rem(74);
