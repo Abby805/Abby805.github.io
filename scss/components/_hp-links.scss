@@ -21,13 +21,13 @@
   font-size: px-to-rem(32);
   font-family: $font-serif;
   font-weight: $font-weight-normal;
-  color: inherit;
+  color: var(--page-accent);
   transition: 0.3s ease color;
 
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: var(--page-accent);
+    color: inherit;
   }
 
   @include bp($bp-sm) {
