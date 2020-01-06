@@ -8,6 +8,7 @@ body {
   font-family: $font-sans;
   font-weight: $font-weight-light;
   line-height: 1.6;
+  color: $c-black;
 }
 
 h1,
@@ -38,6 +39,15 @@ h1 {
 
   @include bp($bp-md) {
     font-size: px-to-rem(74);
+  }
+}
+
+.h1-subtitle {
+  display: block;
+  font-size: px-to-rem(30);
+
+  @include bp($bp-md) {
+    font-size: px-to-rem(60);
   }
 }
 

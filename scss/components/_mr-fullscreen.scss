@@ -20,15 +20,30 @@
 
 .mr-fullscreen__text {
   position: absolute;
-  top: px-to-rem(40);
+  top: 0;
   left: 50%;
+  left: 0;
   width: 80%;
+  width: 100%;
   padding: px-to-rem(20);
-  transform: translateX(-50%);
+  transform: translateX(0); // Hack to let the bg z-index behind the item but not the parent
   text-align: center;
 
   @include bp($bp-md) {
-    width: 50%;
+    // width: 50%;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--page-accent);
+    opacity: 0.5;
+    z-index: -1;
   }
 }
 
@@ -38,7 +53,7 @@
 
 .mr-fullscreen__text--bottom {
   top: auto;
-  bottom: px-to-rem(40);
+  bottom: 0;
 }
 
 .mr-fullscreen__text--middle {
