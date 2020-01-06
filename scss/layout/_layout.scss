@@ -1,13 +1,20 @@
-body {
-  overflow-x: hidden;
+// Page header
+.page-header {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: px-to-rem(20);
 }
 
-.intro-text {
-  max-width: px-to-rem(1320);
-  padding: 0 px-to-rem(20);
-  margin: px-to-rem(40) auto;
+.logo-link {
+  display: block;
+  width: px-to-rem(100);
+  margin: 0 auto;
+  line-height: 0;
+}
 
-  @include breakpoint($bp-sm) {
-    margin: px-to-rem(40) auto px-to-rem(60);
-  }
+.logo polygon {
+  fill: var(--page-logo);
 }

@@ -1,41 +1,60 @@
 // Global typography defaults. If these need to be overridden in a specific
 // instance, it should be done in a "components" partial
+html {
+  font-size: ($font-size-base/16) * 100%;
+}
 
 body {
-  font-family: $font-main;
-  font-size: ($font-size-base/16) * 100%;
+  font-family: $font-sans;
+  font-weight: $font-weight-light;
   line-height: 1.6;
-  background: $c-black;
-  color: $c-white;
+  color: $c-black;
 }
 
-h1 {
-  margin-bottom: px-to-rem(20);
-  font-size: px-to-rem(32);
-  color: $c-salmon;
-
-  @include breakpoint($bp-sm) {
-    font-size: px-to-rem(48);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-serif;
+  font-weight: $font-weight-normal;
 }
 
-p {
-  @include breakpoint($bp-sm) {
-    font-size: px-to-rem(20);
-  }
+strong,
+b {
+  font-weight: $font-weight-bold;
 }
 
-.intro-text p:after {
-  content: '';
-  display: inline-block;
-  margin-left: 0.5em;
-  height: 0.5em;
-  width: 0.5em;
-  background: $c-salmon;
-}
 
 // Undoing the ugly blue glow that defaults when you focus on a link or anything
 // with a tabindex.
 *:focus {
   outline: none;
+}
+
+h1 {
+  font-size: px-to-rem(44);
+  line-height: 1.1;
+
+  @include bp($bp-md) {
+    font-size: px-to-rem(74);
+  }
+}
+
+.h1-subtitle {
+  display: block;
+  font-size: px-to-rem(30);
+
+  @include bp($bp-md) {
+    font-size: px-to-rem(60);
+  }
+}
+
+p {
+  margin-bottom: px-to-rem(20);
+
+  @include bp($bp-md) {
+    font-size: px-to-rem(22);
+  }
 }

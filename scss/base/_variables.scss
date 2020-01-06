@@ -1,14 +1,36 @@
 // Color variables
-$c-black: #1a1a1a;
+$c-black: #333333; // Don't @ me about the name :p
 $c-white: #ffffff;
 $c-salmon: #ff3131;
 
-// Font-related variables
+// This will be overridden per page
+:root {
+  --page-accent: $c-black;
+  --page-logo: $c-white;
+}
 
-$font-main: 'Raleway', 'Helvetica', 'Arial';
-$font-size-base: 16; // The default font size for your site. This gets used in
+// Font-related variables
+$font-serif: 'Crimson Text', serif;
+$font-sans: 'Mukta', sans-serif;
+
+$font-main: $font-sans;
+$font-size-base: 18; // The default font size for your site. This gets used in
 // the px-to-em() function used sitewide.
-$font-weight-normal: 400;
+$font-weight-normal: 400; // The only serif weight
+$font-weight-light: 300; // 'Normal' for sans
+$font-weight-bold: 700; // Sans only
 
 // Breakpoint variables
-$bp-sm: 35em; //560px
+$bp-sm: 560px;
+$bp-md: 768px;
+
+// Time out for a function
+@function px-to-rem($number) {
+  $raw: $number/$font-size-base;
+  $rounded: ceil($raw * 1000)/1000;
+  @return $rounded * 1rem;
+}
+
+// Spacing
+$gutter: px-to-rem(20);
+$halfspace: (#{$gutter} / 2);
