@@ -5,8 +5,8 @@ $c-salmon: #ff3131;
 
 // This will be overridden per page
 :root {
-  --page-accent: $c-black;
-  --page-logo: $c-white;
+  --page-accent: #{$c-black};
+  --page-logo: #{$c-white};
 }
 
 // Font-related variables
