@@ -29,10 +29,6 @@
   transform: translateX(0); // Hack to let the bg z-index behind the item but not the parent
   text-align: center;
 
-  @include bp($bp-md) {
-    // width: 50%;
-  }
-
   &::before {
     content: '';
     display: block;
