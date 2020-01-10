@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons/icons.eot?1578632815');
+  src: url('../fonts/icons/icons.eot?1578632815#iefix') format('eot'),
+    url('../fonts/icons/icons.woff2?1578632815') format('woff2'),
+    url('../fonts/icons/icons.woff?1578632815') format('woff'),
+    url('../fonts/icons/icons.ttf?1578632815') format('truetype'),
+    url('../fonts/icons/icons.svg?1578632815#icons') format('svg');
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == envelope {
+    $char: "\E001";
+  }
+  @if $filename == instagram {
+    $char: "\E002";
+  }
+  @if $filename == linkedin {
+    $char: "\E003";
+  }
+  @if $filename == twitter {
+    $char: "\E004";
+  }
+
+  @return $char;
+}
+
+@mixin icon($filename) {
+  @extend %icon;
+
+  content: icon-char($filename);
+}
