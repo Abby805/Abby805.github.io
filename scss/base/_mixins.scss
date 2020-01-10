@@ -3,9 +3,3 @@
     @content;
   }
 }
-
-@mixin breakpoint($bp) {
-  @media (min-width: #{$bp}) {
-    @content;
-  }
-}

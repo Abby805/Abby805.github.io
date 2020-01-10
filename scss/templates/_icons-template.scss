@@ -23,3 +23,8 @@
 
   content: <%= cssClass%>-char($filename);
 }
+
+<% _.each(glyphs, function(glyph) { %>.i-<%= glyph.fileName %>::before {
+  @include <%= cssClass%>(<%= glyph.fileName %>);
+}
+<% }); %>

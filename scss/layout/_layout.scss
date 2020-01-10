@@ -18,3 +18,35 @@
 .logo polygon {
   fill: var(--page-logo);
 }
+
+// Page footer
+.page-footer {
+  margin-top: px-to-rem(40);
+  padding: px-to-rem(20);
+  background: var(--page-accent);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-links li {
+  margin: 0 px-to-rem(10);
+  line-height: 0;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: $c-white;
+  transition: 0.3s ease opacity;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.contact-links a span {
+  @extend %visually-hidden;
+}
