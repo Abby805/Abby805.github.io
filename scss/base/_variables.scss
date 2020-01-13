@@ -3,9 +3,9 @@ $c-black: #333333; // Don't @ me about the name :p
 $c-white: #ffffff;
 $c-salmon: #ff3131;
 
-// This will be overridden per page
+// This will (usually) be overridden per page
 :root {
-  --page-accent: #{$c-black};
+  --page-accent: #066;
   --page-logo: #{$c-white};
 }
 
