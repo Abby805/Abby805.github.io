@@ -58,3 +58,13 @@ p {
     font-size: px-to-rem(22);
   }
 }
+
+a {
+  color: var(--page-accent);
+  transition: 0.3s ease color;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}

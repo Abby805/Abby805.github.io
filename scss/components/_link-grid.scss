@@ -1,6 +1,6 @@
-// Homepage link grid
+// Link grid
 
-.hp-links {
+.link-grid {
   max-width: px-to-rem(1080);
   margin-left: auto;
   margin-right: auto;
@@ -15,7 +15,7 @@
   }
 }
 
-.hp-links a {
+.link-grid a {
   display: block;
   margin-bottom: px-to-rem(60);
   text-align: center;
@@ -23,13 +23,10 @@
   font-size: px-to-rem(32);
   font-family: $font-serif;
   font-weight: $font-weight-normal;
-  color: var(--page-accent);
-  transition: 0.3s ease color;
 
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: inherit;
   }
 
   @include bp($bp-sm) {

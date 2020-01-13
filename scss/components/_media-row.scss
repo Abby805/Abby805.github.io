@@ -4,7 +4,7 @@
 .media-row {
   position: relative;
   margin-bottom: px-to-rem(60);
-  padding-bottom: px-to-rem(30);
+  padding: 0 px-to-rem(20) px-to-rem(30);
 
   &::after {
     content: '';
@@ -27,11 +27,6 @@
   &::after {
     display: none;
   }
-}
-
-.media-row:not(.mr-fullscreen) {
-  padding-left: px-to-rem(20);
-  padding-right: px-to-rem(20);
 }
 
 // Widths

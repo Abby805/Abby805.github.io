@@ -1,13 +1,17 @@
-// Homepage - Fullscreen
+// Hero
 
-.hp-fullscreen {
+.hero {
   position: relative;
-  height: 75vh;
+  height: 100vh;
   overflow: hidden;
   margin-bottom: px-to-rem(60);
 }
 
-.hp-fullscreen__img {
+.hero--short {
+  height: 75vh;
+}
+
+.hero__img {
   position: absolute;
   object-fit: cover;
   width: 100%;
@@ -15,13 +19,13 @@
   max-width: none;
 }
 
-.hp-fullscreen__text {
+.hero__text {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   padding: px-to-rem(20);
-  transform: translateX(0);
+  transform: translateX(0); // Hack to let the bg z-index behind the item but not the parent
   text-align: center;
   color: $c-white;
 
