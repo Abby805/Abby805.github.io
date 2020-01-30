@@ -19,12 +19,16 @@
   max-width: none;
 }
 
+.hero__img--left {
+  object-position: 0 50%;
+}
+
 .hero__text {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: px-to-rem(20);
+  padding: px-to-rem(20) px-to-rem(20) px-to-rem(25);
   transform: translateX(0); // Hack to let the bg z-index behind the item but not the parent
   text-align: center;
   color: $c-white;

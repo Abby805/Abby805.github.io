@@ -3,8 +3,8 @@
 // Common margins & padding
 .media-row {
   position: relative;
-  margin-bottom: px-to-rem(60);
-  padding: 0 px-to-rem(20) px-to-rem(30);
+  margin-bottom: px-to-rem(45);
+  padding: 0 px-to-rem(20) px-to-rem(45);
 
   &::after {
     content: '';
@@ -15,9 +15,9 @@
     height: 0;
     margin-left: px-to-rem(-15);
     bottom: 0;
-    border-top-width: 0;
+    border-bottom-width: 0;
     border: solid transparent px-to-rem(12);
-    border-bottom: solid px-to-rem(15) var(--page-accent);
+    border-top: solid px-to-rem(15) var(--page-accent);
   }
 }
 
