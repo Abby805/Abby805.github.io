@@ -8,15 +8,12 @@ body {
   font-family: $font-sans;
   font-weight: $font-weight-light;
   line-height: 1.6;
-  color: $c-black;
+  background: $c-gray-dk;
+  color: $c-white;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: $font-serif;
   font-weight: $font-weight-normal;
 }
@@ -34,20 +31,36 @@ b {
 }
 
 h1 {
+  margin-bottom: px-to-rem(30);
   font-size: px-to-rem(44);
   line-height: 1.2;
+  color: $c-blue;
 
   @include bp($bp-md) {
     font-size: px-to-rem(74);
   }
 }
 
-.h1-subtitle {
-  display: block;
+h2 {
   font-size: px-to-rem(30);
+  color: $c-white;
 
-  @include bp($bp-md) {
-    font-size: px-to-rem(60);
+   @include bp($bp-md) {
+    font-size: px-to-rem(50);
+  }
+}
+
+h3 {
+  margin-bottom: px-to-rem(10);
+  font-size: px-to-rem(20);
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  letter-spacing: px-to-rem(0.6);
+  color: $c-white;
+
+   @include bp($bp-md) {
+    font-size: px-to-rem(24);
+    letter-spacing: px-to-rem(1);
   }
 }
 

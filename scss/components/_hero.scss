@@ -1,83 +1,21 @@
 // Hero
 
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: px-to-rem(60);
-}
-
-.hero--short {
-  height: 75vh;
-}
-
-.hero__img {
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-}
-
-.hero__img--left {
-  object-position: 0 50%;
-}
-
-.hero__text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: px-to-rem(20) px-to-rem(20) px-to-rem(25);
-  transform: translateX(0); // Hack to let the bg z-index behind the item but not the parent
-  text-align: center;
-  color: $c-white;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--page-accent);
-    opacity: 0.75;
-    z-index: -1;
-  }
-}
-
-
-
-
-
-
-
-
-// New
-
-body {
-  background: #222;
-  color: $c-white;
-}
-
 .hp-hero-outer {
   position: relative;
 
   &::before {
+    @include bp($bp-lg) {
     content: '';
     display: block;
     position: absolute;
     top: px-to-rem(60);
-    bottom: px-to-rem(60);
     bottom: 0;
     right: 0;
-
-    width: calc(50% + 100px);
-    // width: 50%;
-
-    background-image: linear-gradient(-65deg, transparent 0%, #222 75%), url('../images/pattern-03.png');
-    // background-image: linear-gradient(-60deg, red 0%, green 100%), url('../images/pattern-03.png');
+    width: calc(50% + #{px-to-rem(100)});
+    background-image: 
+      linear-gradient(-65deg, transparent 0%, $c-gray-dk 75%), 
+      url('../images/pattern-03.png');
+    }
   }
 }
 
@@ -90,17 +28,10 @@ body {
   @include bp($bp-md) {
     padding: px-to-rem(60) px-to-rem(40);
   }
-
-}
-
-.hp-hero h1 {
-  color: $c-blue;
-  margin-bottom: px-to-rem(30);
 }
 
 .hp-hero p {
   @include bp($bp-lg) {
-    // margin-left: 25%;
-    max-width: 66%;
+    width: 66%;
   }
 }
