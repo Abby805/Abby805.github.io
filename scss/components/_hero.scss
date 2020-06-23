@@ -56,44 +56,51 @@
 
 // New
 
-.hp-hero {
-  padding: px-to-rem(20);
-  // background: $c-blue-lt;
+body {
+  background: #222;
+  color: $c-white;
+}
 
-  // background: $c-black;
+.hp-hero-outer {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: px-to-rem(60);
+    bottom: px-to-rem(60);
+    bottom: 0;
+    right: 0;
+
+    width: calc(50% + 100px);
+    // width: 50%;
+
+    background-image: linear-gradient(-65deg, transparent 0%, #222 75%), url('../images/pattern-03.png');
+    // background-image: linear-gradient(-60deg, red 0%, green 100%), url('../images/pattern-03.png');
+  }
+}
+
+.hp-hero {
+  position: relative;
+  padding: px-to-rem(20);
+  margin: 0 auto;
+  max-width: $stage-max;
 
   @include bp($bp-md) {
     padding: px-to-rem(60) px-to-rem(40);
   }
+
 }
 
 .hp-hero h1 {
-  // color: $c-white;
   color: $c-blue;
-  margin-bottom: px-to-rem(40);
-
-  @include bp($bp-md) {
-    margin-bottom: px-to-rem(60);
-
-  }
-
-  @include bp($bp-lg) {
-    max-width: 66%;
-  }
+  margin-bottom: px-to-rem(30);
 }
 
 .hp-hero p {
   @include bp($bp-lg) {
+    // margin-left: 25%;
     max-width: 66%;
   }
 }
-
-.hp-hero-inner {
-  @include bp($bp-lg) {
-
-    margin: 0 auto;
-    max-width: px-to-rem(1080);
-    max-width: 80%;
-  }
-}
-

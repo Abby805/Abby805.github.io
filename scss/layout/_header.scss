@@ -1,23 +1,12 @@
 // Page header
 .page-header {
-  // position: absolute;
-  // z-index: 2;
-  // left: 0;
-  // right: 0;
-  // top: 0;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: px-to-rem(20);
-
-
-
-
-  padding: px-to-rem(20);
-  // background: $c-blue-lt;
-
-  // background: $c-black;
-
+  margin: 0 auto;
+  max-width: $stage-max;
+  
   @include bp($bp-md) {
     padding: px-to-rem(40) px-to-rem(40) 0;
   }
@@ -26,30 +15,26 @@
 .logo-link {
   display: block;
   width: px-to-rem(129);
-  // margin: 0 auto;
   line-height: 0;
 }
 
 .logo polygon,
 .logo path,
 .hamburger path {
-  // fill: var(--page-logo);
-  fill: $c-blue;
+  fill: $c-white;
 }
 
-// .menu-trigger {
-//   display: none;
+.menu-trigger {
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
 
-//   -webkit-appearance: none;
-//   padding: 0;
-//   margin: 0;
-//   line-height: 0;
-//   background: transparent;
-//   border: none;
-//   outline: none;
-// }
-
-// .hamburger {
-//   width: px-to-rem(40);
-//   height: px-to-rem(30);
-// }
+.hamburger {
+  width: px-to-rem(40);
+  height: px-to-rem(30);
+}
