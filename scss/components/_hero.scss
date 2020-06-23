@@ -46,3 +46,54 @@
     z-index: -1;
   }
 }
+
+
+
+
+
+
+
+
+// New
+
+.hp-hero {
+  padding: px-to-rem(20);
+  // background: $c-blue-lt;
+
+  // background: $c-black;
+
+  @include bp($bp-md) {
+    padding: px-to-rem(60) px-to-rem(40);
+  }
+}
+
+.hp-hero h1 {
+  // color: $c-white;
+  color: $c-blue;
+  margin-bottom: px-to-rem(40);
+
+  @include bp($bp-md) {
+    margin-bottom: px-to-rem(60);
+
+  }
+
+  @include bp($bp-lg) {
+    max-width: 66%;
+  }
+}
+
+.hp-hero p {
+  @include bp($bp-lg) {
+    max-width: 66%;
+  }
+}
+
+.hp-hero-inner {
+  @include bp($bp-lg) {
+
+    margin: 0 auto;
+    max-width: px-to-rem(1080);
+    max-width: 80%;
+  }
+}
+

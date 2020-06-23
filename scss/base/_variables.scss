@@ -1,7 +1,14 @@
 // Color variables
-$c-black: #333333; // Don't @ me about the name :p
+$c-black: #111; // Don't @ me about the name :p
 $c-white: #ffffff;
 $c-salmon: #ff3131;
+
+
+
+$c-blue: #30639e;
+$c-blue-lt: #608fbd;
+$c-purple: #662d91;
+
 
 // This will (usually) be overridden per page
 :root {
@@ -23,6 +30,7 @@ $font-weight-bold: 700; // Sans only
 // Breakpoint variables
 $bp-sm: 560px;
 $bp-md: 768px;
+$bp-lg: 1200px;
 
 // Time out for a function
 @function px-to-rem($number) {

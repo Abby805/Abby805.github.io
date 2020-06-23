@@ -1,8 +1,9 @@
 // Page footer
 .page-footer {
-  margin-top: px-to-rem(40);
+  // margin-top: px-to-rem(40);
   padding: px-to-rem(20);
-  background: var(--page-accent);
+  // background: var(--page-accent);
+  background: $c-blue;
 }
 
 .contact-links {
