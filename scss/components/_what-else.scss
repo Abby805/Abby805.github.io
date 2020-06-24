@@ -5,10 +5,6 @@
 }
 
 .what-else {
-  padding: px-to-rem(20);
-  margin: 0 auto;
-  max-width: $stage-max;
-
   @include bp($bp-md) {
     padding: px-to-rem(30) px-to-rem(40);
   }

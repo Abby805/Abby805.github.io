@@ -5,16 +5,6 @@
   color: $c-gray-dk;
 }
 
-.portfolio {
-  padding: px-to-rem(20);
-  margin: 0 auto;
-  max-width: $stage-max;
-
-  @include bp($bp-md) {
-    padding: px-to-rem(60) px-to-rem(40);
-  }
-}
-
 .port-piece {
   margin-top: px-to-rem(30);
   padding-top: px-to-rem(40);

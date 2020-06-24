@@ -23,9 +23,6 @@ b {
   font-weight: $font-weight-bold;
 }
 
-
-// Undoing the ugly blue glow that defaults when you focus on a link or anything
-// with a tabindex.
 *:focus {
   outline: none;
 }

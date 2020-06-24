@@ -1,14 +1,7 @@
 // Color variables
-$c-black: #000;
 $c-gray-dk: #222;
 $c-white: #fff;
 $c-blue: #369fb9;
-
-// This will (usually) be overridden per page
-:root {
-  --page-accent: #066;
-  --page-logo: #{$c-white};
-}
 
 // Font-related variables
 $font-serif: 'Crimson Text', serif;
@@ -22,7 +15,6 @@ $font-weight-light: 300; // 'Normal' for sans
 $font-weight-bold: 700; // Sans only
 
 // Breakpoint variables
-$bp-sm: 560px;
 $bp-md: 768px;
 $bp-lg: 1200px;
 
@@ -34,6 +26,4 @@ $bp-lg: 1200px;
 }
 
 // Spacing
-$gutter: px-to-rem(20);
-$halfspace: (#{$gutter} / 2);
 $stage-max: px-to-rem(1200);

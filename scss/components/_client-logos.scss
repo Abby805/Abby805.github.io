@@ -4,13 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: px-to-rem(20);
-  margin: 0 auto;
-  max-width: $stage-max;
-
-  @include bp($bp-md) {
-    padding: px-to-rem(60) px-to-rem(40);
-  }
 }
 
 .client-logos h2 {

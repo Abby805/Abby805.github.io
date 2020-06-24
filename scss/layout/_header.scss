@@ -1,9 +1,5 @@
 // Page header
-.page-header {
-  padding: px-to-rem(20);
-  margin: 0 auto;
-  max-width: $stage-max;
-  
+.page-header {  
   @include bp($bp-md) {
     padding: px-to-rem(40) px-to-rem(40) 0;
   }
