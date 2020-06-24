@@ -1,16 +1,16 @@
 // Hero
 
-.what-else-outer {
+.ps-outer {
   background: rgba($c-blue, 0.5);
 }
 
-.what-else {
+.ps {
   @include bp($bp-md) {
     padding: px-to-rem(30) px-to-rem(40);
   }
 }
 
-.what-else p {
+.ps p {
   margin-bottom: 0;
   font-weight: $font-weight-bold;
   letter-spacing: px-to-rem(0.6);
