@@ -1,0 +1,50 @@
+// Hero
+
+.what-else-outer {
+  background: rgba($c-blue, 0.5);
+  // color: $c-gray-dk;
+}
+
+.what-else {
+  padding: px-to-rem(20);
+  margin: 0 auto;
+  max-width: $stage-max;
+
+  @include bp($bp-md) {
+    padding: px-to-rem(40) px-to-rem(40);
+  }
+}
+
+// .what-else h2 {
+//   margin-bottom: px-to-rem(40);
+// }
+
+
+.what-else p {
+
+  margin-bottom: 0;
+  // font-size: px-to-rem(20);
+
+
+
+    // text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  letter-spacing: px-to-rem(0.6);
+  // font-family: $font-serif;
+
+  @include bp($bp-lg) {
+    // width: 66%;
+  }
+
+   @include bp($bp-md) {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // align-items: center;
+    // font-size: px-to-rem(24);
+    // letter-spacing: px-to-rem(1);
+
+
+  }
+}
+

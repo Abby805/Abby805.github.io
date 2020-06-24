@@ -1,7 +1,6 @@
 // Page footer
 .page-footer {
   padding: px-to-rem(20);
-  background: $c-black;
 }
 
 .contact-links {
@@ -23,8 +22,4 @@
   &:focus {
     opacity: 0.8;
   }
-}
-
-.contact-links a span {
-  @extend %visually-hidden;
 }

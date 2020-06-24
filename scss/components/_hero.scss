@@ -5,16 +5,17 @@
 
   &::before {
     @include bp($bp-lg) {
-    content: '';
-    display: block;
-    position: absolute;
-    top: px-to-rem(60);
-    bottom: 0;
-    right: 0;
-    width: calc(50% + #{px-to-rem(100)});
-    background-image: 
-      linear-gradient(-65deg, transparent 0%, $c-gray-dk 75%), 
-      url('../images/pattern-03.png');
+      content: '';
+      display: block;
+      position: absolute;
+      top: px-to-rem(60);
+      // top: px-to-rem(-112);
+      bottom: 0;
+      right: 0;
+      width: calc(50% + #{px-to-rem(100)});
+      background-image: 
+        linear-gradient(-65deg, transparent 0%, $c-gray-dk 75%), 
+        url('../images/pattern-03.png');
     }
   }
 }

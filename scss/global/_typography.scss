@@ -72,12 +72,40 @@ p {
   }
 }
 
-a {
-  color: var(--page-accent);
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: px-to-rem(15) px-to-rem(40);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: px-to-rem(1);
+  background: $c-gray-dk;
+  color: $c-white;
   transition: 0.3s ease color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: px-to-rem(10);
+    left: 0;
+    width: 0;
+    height: px-to-rem(2);
+    background: $c-blue;
+    transition: 0.3s ease width;
+  }
 
   &:hover,
   &:focus {
-    color: inherit;
+    color: $c-blue;
+
+    &::after {
+      width: 100%;
+    }
   }
+}
+
+// Helpers
+.visually-hidden {
+  @extend %visually-hidden;  
 }
