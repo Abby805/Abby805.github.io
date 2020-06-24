@@ -1,8 +1,8 @@
 // Page header
 .page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
   padding: px-to-rem(20);
   margin: 0 auto;
   max-width: $stage-max;
@@ -19,22 +19,21 @@
 }
 
 .logo polygon,
-.logo path,
-.hamburger path {
+.logo path {
   fill: $c-white;
 }
 
-.menu-trigger {
-  -webkit-appearance: none;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-  background: transparent;
-  border: none;
-  outline: none;
-}
+// .menu-trigger {
+//   -webkit-appearance: none;
+//   padding: 0;
+//   margin: 0;
+//   line-height: 0;
+//   background: transparent;
+//   border: none;
+//   outline: none;
+// }
 
-.hamburger {
-  width: px-to-rem(40);
-  height: px-to-rem(30);
-}
+// .hamburger {
+//   width: px-to-rem(40);
+//   height: px-to-rem(30);
+// }

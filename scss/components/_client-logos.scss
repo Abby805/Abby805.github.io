@@ -1,0 +1,42 @@
+// Client logo grid
+
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: px-to-rem(20);
+  margin: 0 auto;
+  max-width: $stage-max;
+
+  @include bp($bp-md) {
+    padding: px-to-rem(60) px-to-rem(40);
+  }
+}
+
+.client-logos h2 {
+  width: 100%;
+  flex: 0 0 100%;
+  margin-bottom: px-to-rem(40);
+  color: $c-blue;
+}
+
+.client-logo {
+  width: 50%;
+  flex: 0 0 50%;
+  margin-bottom: px-to-rem(40);
+  text-align: center;
+
+  @include bp($bp-md) {
+    width: 25%;
+    flex: 0 0 25%;
+  }
+}
+
+.client-logo svg {
+  max-width: 80%;
+}
+
+.client-logo path,
+.client-logo polyline {
+  fill: $c-white;
+}

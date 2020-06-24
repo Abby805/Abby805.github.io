@@ -1,21 +1,5 @@
 // Portfolio pieces
 
-// <div class="portfolio-outer">
-//   <div class="portfolio">
-//     <h2>Work</h2>
-//     <p>Something something lorem ipsum yada yada yada</p>
-
-//     <section class="port-piece">
-//       <img src="images/web-port/glanbia-lg.jpg" alt="Screenshot of Optimum Nutrition homepage" class="port-img">
-//       <div class="port-text">
-//         <h3>Optimum Nutrition</h3>
-//         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris libero turpis, rutrum efficitur rutrum ac, egestas vel lacus. Ut ac turpis scelerisque, sagittis odio at, elementum turpis. Aenean tristique lectus sed magna luctus tristique. In elit turpis, dapibus et tincidunt in, accumsan non ex. Duis interdum quam a sollicitudin vehicula. Vivamus ac luctus nibh, at sagittis mauris. Curabitur lorem felis, volutpat ut massa sed, bibendum commodo nisl.</p>
-//       </div>
-
-//     </section>
-//   </div>
-// </div>
-
 .portfolio-outer {
   background: $c-blue;
   color: $c-gray-dk;
@@ -32,11 +16,16 @@
 }
 
 .port-piece {
-  display: flex;
-  justify-content: space-between;
-  margin-top: px-to-rem(60);
-  padding-top: px-to-rem(60);
+  margin-top: px-to-rem(30);
+  padding-top: px-to-rem(40);
   border-top: solid px-to-rem(2) rgba($c-gray-dk, 0.25);
+
+  @include bp($bp-md) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: px-to-rem(60);
+    padding-top: px-to-rem(60);
+  }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
@@ -44,9 +33,16 @@
 }
 
 .port-img-wrapper {
-  width: 50%;
+  margin-bottom: px-to-rem(30);
+
+  @include bp($bp-md) {
+    width: 50%;
+    margin-bottom: 0;
+  }
 }
 
 .port-text {
-  width: 45%;
+  @include bp($bp-md) {
+    width: 45%;
+  }
 }

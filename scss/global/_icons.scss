@@ -1,27 +1,30 @@
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons/icons.eot?1578695373');
-  src: url('../fonts/icons/icons.eot?1578695373#iefix') format('eot'),
-    url('../fonts/icons/icons.woff2?1578695373') format('woff2'),
-    url('../fonts/icons/icons.woff?1578695373') format('woff'),
-    url('../fonts/icons/icons.ttf?1578695373') format('truetype'),
-    url('../fonts/icons/icons.svg?1578695373#icons') format('svg');
+  src: url('../fonts/icons/icons.eot?1592950031');
+  src: url('../fonts/icons/icons.eot?1592950031#iefix') format('eot'),
+    url('../fonts/icons/icons.woff2?1592950031') format('woff2'),
+    url('../fonts/icons/icons.woff?1592950031') format('woff'),
+    url('../fonts/icons/icons.ttf?1592950031') format('truetype'),
+    url('../fonts/icons/icons.svg?1592950031#icons') format('svg');
 }
 
 @function icon-char($filename) {
   $char: "";
 
-  @if $filename == envelope {
+  @if $filename == drupal {
     $char: "\E001";
   }
-  @if $filename == instagram {
+  @if $filename == envelope {
     $char: "\E002";
   }
-  @if $filename == linkedin {
+  @if $filename == instagram {
     $char: "\E003";
   }
-  @if $filename == twitter {
+  @if $filename == linkedin {
     $char: "\E004";
+  }
+  @if $filename == twitter {
+    $char: "\E005";
   }
 
   @return $char;
@@ -33,6 +36,9 @@
   content: icon-char($filename);
 }
 
+.i-drupal::before {
+  @include icon(drupal);
+}
 .i-envelope::before {
   @include icon(envelope);
 }
