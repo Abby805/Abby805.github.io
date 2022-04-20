@@ -36,3 +36,13 @@
     width: 45%;
   }
 }
+
+.port-text a {
+  font-weight: $font-weight-bold;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
