@@ -5,39 +5,27 @@
   color: $c-gray-dk;
 }
 
-.port-piece {
-  margin-top: px-to-rem(30);
-  padding-top: px-to-rem(40);
-  border-top: solid px-to-rem(2) rgba($c-gray-dk, 0.25);
+.pieces {
+  padding-top: px-to-rem(30);
 
   @include bp($bp-md) {
     display: flex;
     justify-content: space-between;
-    margin-top: px-to-rem(60);
-    padding-top: px-to-rem(60);
-  }
-
-  &:nth-child(even) {
-    flex-direction: row-reverse;
   }
 }
 
-.port-img-wrapper {
+.port-piece {
   margin-bottom: px-to-rem(30);
 
   @include bp($bp-md) {
-    width: 50%;
+    flex: 0 0 27%;
+    width: 27%;
+    max-width: 27%;
     margin-bottom: 0;
   }
 }
 
-.port-text {
-  @include bp($bp-md) {
-    width: 45%;
-  }
-}
-
-.port-text a {
+.port-piece a {
   font-weight: $font-weight-bold;
   color: inherit;
 
