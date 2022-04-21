@@ -12,8 +12,8 @@
       bottom: 0;
       right: 0;
       width: calc(50% + #{px-to-rem(100)});
-      background-image: 
-        linear-gradient(-65deg, transparent 0%, $c-gray-dk 75%), 
+      background-image:
+        linear-gradient(-65deg, transparent 0%, $c-gray-dk 75%),
         url('../images/pattern-03.png');
     }
   }
