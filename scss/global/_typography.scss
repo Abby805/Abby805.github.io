@@ -39,6 +39,7 @@ h1 {
 }
 
 h2 {
+  margin-bottom: px-to-rem(30);
   font-size: px-to-rem(30);
   color: $c-white;
 
@@ -47,9 +48,15 @@ h2 {
   }
 }
 
-h3 {
+h2:has(span) {
+  margin-bottom: px-to-rem(10);
+}
+
+h3,
+h2 span {
   margin-bottom: px-to-rem(10);
   font-size: px-to-rem(20);
+  font-family: $font-sans;
   text-transform: uppercase;
   font-weight: $font-weight-bold;
   letter-spacing: px-to-rem(0.6);

@@ -5,22 +5,24 @@
   color: $c-gray-dk;
 }
 
-.pieces {
-  padding-top: px-to-rem(30);
-
+.portfolio h2,
+.about h2 {
   @include bp($bp-md) {
-    display: flex;
-    justify-content: space-between;
+    grid-column: 1 / 4;
   }
 }
 
-.port-piece {
-  margin-bottom: px-to-rem(30);
-
+.pieces,
+.about {
   @include bp($bp-md) {
-    flex: 0 0 27%;
-    width: 27%;
-    max-width: 27%;
+    display: grid;
+    column-gap: px-to-rem(60);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.port-piece p {
+  @include bp($bp-md) {
     margin-bottom: 0;
   }
 }
@@ -32,5 +34,13 @@
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+}
+
+// About
+
+.about p {
+  @include bp($bp-lg) {
+    grid-column: 1 / 3;
   }
 }

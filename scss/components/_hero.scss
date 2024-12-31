@@ -1,37 +1,27 @@
 // Hero
 
-.hp-hero-outer {
-  position: relative;
-
-  &::before {
-    @include bp($bp-lg) {
-      content: '';
-      display: block;
-      position: absolute;
-      top: px-to-rem(60);
-      bottom: 0;
-      right: 0;
-      width: calc(50% + #{px-to-rem(100)});
-      background-image:
-        linear-gradient(-65deg, transparent 0%, $c-gray-dk 75%),
-        url('../images/pattern-03.png');
-    }
-  }
-}
 
 .hp-hero {
-  position: relative;
   padding: px-to-rem(20);
   margin: 0 auto;
   max-width: $stage-max;
 
   @include bp($bp-md) {
-    padding: px-to-rem(60) px-to-rem(40);
+    display: grid;
+    column-gap: px-to-rem(60);
+    grid-template-columns: repeat(3, 1fr);
+    padding: px-to-rem(120) px-to-rem(40);
+  }
+}
+
+.hp-hero h1 {
+  @include bp($bp-lg) {
+    grid-column: 1 / 4;
   }
 }
 
 .hp-hero p {
   @include bp($bp-lg) {
-    width: 66%;
+    grid-column: 1 / 3;
   }
 }
