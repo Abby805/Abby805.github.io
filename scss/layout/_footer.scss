@@ -1,7 +1,7 @@
 // Page footer
 .page-footer {
   padding: px-to-rem(20);
-  background: rgba($c-blue, 0.5);
+  background: $c-blue;
 }
 
 .contact-links {
@@ -16,7 +16,7 @@
 
 .contact-links a {
   text-decoration: none;
-  color: $c-white;
+  color: $c-gray-dk;
   transition: 0.3s ease opacity;
 
   &:hover,
